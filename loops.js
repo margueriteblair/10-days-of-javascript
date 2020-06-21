@@ -2,6 +2,7 @@
  * Complete the vowelsAndConsonants function.
  * Print your output using 'console.log()'.
  */
+let s = "javascript";
 function vowelsAndConsonants(s) {
     let vowels = 'aeiou';
     let consonants = '';
