@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Binary Calculator</title>
+    <style>
+        body {
+            width: 33%;
+        }
+        #res {
+            background-color: lightgray;
+            border: solid;
+            height: 48px;
+            font-size: 20px;
+        }
+        #btn0, #btn1 {
+            background-color: lightgreen;
+            color: brown;
+        }
+        #btnClr, #btnEql {
+            background-color: darkgreen;
+            color: white;
+        }
+        #btnSum, #btnSub, #btnMul, #btnDiv {
+            background-color:black;
+            color: red
+        }
+        #btns button {
+            width: 25%;
+            height: 36px;
+            font-size: 18px;
+            margin: 0px;
+            float: left;
+        }
+    </style>
+</head>
+<body>
+    <div id='res'></div>
+    <div id='btns'>
+        <button id='btn0'>0</button>
+        <button id='btn1'>1</button>
+        <button id='btnClr'>C</button>
+        <button id='btnEql'>=</button>
+        <button id='btnSum'>+</button>
+        <button id='btnSub'>-</button>
+        <button id='btnMul'>*</button>
+        <button id='btnDiv'>/</button>
+    </div>
+    <script>
+        let resNums = []
+        document.getElementById('btn0').onclick = function() {
+            resNums.push(0);
+            document.getElementById('res').innerText = parseInt(resNums.join(''));
+        }
+        document.getElementById('btn1').onclick = function() {
+            resNums.push(1);
+            document.getElementById('res').innerText = parseInt(resNums.join(''));
+        }
+        document.getElementById('btnClr').onclick = function() {
+            resNums = [];
+            document.getElementById('res').innerText = "";
+        }
+        document.getElementById('btnEql').onclick = function () {
+            //add equals
+        }
+        document.getElementById('btnSum').onclick = function(){
+            resNums.push("+");
+            console.log(resNums)
+            // document.getElementById('res').innerText = parseInt(resNums.join(''));
+        }
+    </script>
+</body>
+</html>
