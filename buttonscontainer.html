@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #btns{
+            width: 75%;
+        }
+        #btns button {
+            height: 48px;
+            width: 30%;
+            font-size: 24px;
+        }
+    </style>
+</head>
+<body>
+<div id='btns'>
+    <button id="btn1"></button>
+    <button id="btn2"></button>
+    <button id="btn3"></button>
+    <button id="btn4"></button>
+    <button id="btn5">5</button>
+    <button id="btn6"></button>
+    <button id="btn7"></button>
+    <button id="btn8"></button>
+    <button id="btn9"></button>
+</div>
+<script>
+    let textContents = [1, 2, 3, 6, 9, 8, 7, 4];
+    let ids = [1, 2, 3, 6, 9, 8, 7, 4];
+    for (let i = 1; i < 10; i++) {
+        document.getElementById('btn' + i).textContent = i;
+    }
+    document.getElementById('btn5').addEventListener("click", function(){
+        console.log('hello world')
+        textContents.unshift(textContents.pop());
+        for (i = 0; i < 8; i++){
+            document.getElementById('btn'+ids[i]).innerHTML = textContents[i];
+        }
+    })
+</script>
+</body>
+</html>
