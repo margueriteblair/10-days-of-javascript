@@ -48,26 +48,39 @@
         <button id='btnDiv'>/</button>
     </div>
     <script>
-        let resNums = []
+        // let resNums = []
         document.getElementById('btn0').onclick = function() {
-            resNums.push(0);
-            document.getElementById('res').innerText = parseInt(resNums.join(''));
+            // resNums.push(0);
+            document.getElementById('res').innerText += 0;
         }
         document.getElementById('btn1').onclick = function() {
-            resNums.push(1);
-            document.getElementById('res').innerText = parseInt(resNums.join(''));
+            // resNums.push(1);
+            document.getElementById('res').innerText += 1;
         }
         document.getElementById('btnClr').onclick = function() {
             resNums = [];
             document.getElementById('res').innerText = "";
         }
-        document.getElementById('btnEql').onclick = function () {
-            //add equals
-        }
         document.getElementById('btnSum').onclick = function(){
-            resNums.push("+");
-            console.log(resNums)
-            // document.getElementById('res').innerText = parseInt(resNums.join(''));
+            document.getElementById('res').innerText += "+";
+        }
+        document.getElementById('btnSub').onclick = function(){
+            document.getElementById('res').innerText += "-";
+        }
+        document.getElementById('btnMul').onclick = function(){
+            document.getElementById('res').innerText += "*";
+        }
+        document.getElementById('btnDiv').onclick = function(){
+            document.getElementById('res').innerText += "%";
+        }
+        document.getElementById('btnEql').onclick = function () {
+            let operatorRegex = /[\+|\-|\*|\/]/
+            let operand2 = []; //operand two is integers, operand1 is string
+            let operand1 = document.getElementById('res').innerText.split(operatorRegex);
+            for (let i = 0; i < operand1.length; i++) {
+                operand2.push(parseInt(operand1[i]));
+            }
+            console.log(operand2);
         }
     </script>
 </body>
