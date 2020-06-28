@@ -77,12 +77,11 @@
             let operatorRegex = /[\+|\-|\*|\/]/
             let operand2 = []; //operand two is integers, operand1 is string
             let operand1 = document.getElementById('res').innerText.split(operatorRegex);
-            for (let i = 0; i < operand1.length; i++) {
-                operand2.push(parseInt(operand1[i]));
-
-            }
-            console.log(parseInt(operand1, 2));
-            console.log(operand2);
+            let result = parseInt(operand1[0], 2)*parseInt(operand1[1],2)
+            console.log(result)
+            let binaryResult = result.toString(2);
+            document.getElementById('res').innerText = binaryResult;
+            
         }
     </script>
 </body>
