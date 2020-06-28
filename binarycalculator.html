@@ -79,7 +79,9 @@
             let operand1 = document.getElementById('res').innerText.split(operatorRegex);
             for (let i = 0; i < operand1.length; i++) {
                 operand2.push(parseInt(operand1[i]));
+
             }
+            console.log(parseInt(operand1, 2));
             console.log(operand2);
         }
     </script>
