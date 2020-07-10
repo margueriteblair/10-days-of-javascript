@@ -1,3 +1,4 @@
+console.log("Hello World");
 let nums = [2, 3, 6, 6, 5];
 function getSecondLargest(nums) {
     let largestNumber = 0;
@@ -7,13 +8,14 @@ function getSecondLargest(nums) {
         if (nums[i] > largestNumber) {
             secondLargestNumber = largestNumber;
             largestNumber = nums[i];
-            continue;
         }
         
         if ((nums[i] > secondLargestNumber) && (nums[i] < largestNumber)) {
             secondLargestNumber = nums[i];
         }
     }
-    
+    console.log(secondLargestNumber);
     return secondLargestNumber;
+    
 }
+getSecondLargest(nums);

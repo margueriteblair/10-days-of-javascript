@@ -31,6 +31,10 @@ function getMaxLessThanK(n, k) {
         }
     }
     return maxAAndb;
+    // n = # of zeros or ones in binary num
+    // 01010, 00001; a&b = 0;
+    // k > a&b
+    // 00111&10011 = 00011 = 2+1 = 3;
 }
 
 function main() {
