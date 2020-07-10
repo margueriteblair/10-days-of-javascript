@@ -6,7 +6,6 @@ function getSecondLargest(nums) {
     
     for (let i = 0; i < nums.length; i++) {
         if (nums[i] > largestNumber) {
-            secondLargestNumber = largestNumber;
             largestNumber = nums[i];
         }
         
